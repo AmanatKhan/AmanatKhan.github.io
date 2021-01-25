@@ -1,26 +1,62 @@
-<html lang="en" style="background-color: white;">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="margin-left: 10%; margin-right: 10%; background-color: aqua; padding: 10px; font-family: "cursive";">
-<h1>Convert your age to <span style="text-decoration: underline;">months</span>
-    <span style="text-decoration: underline;">days</span>,
-    <span style="text-decoration: underline;">hours</span>,
-    <span style="text-decoration: underline;">minutes</span>, and
-    <span style="text-decoration: underline;">seconds</span></h1>
-    <h3>Type in your age</h3>
-    <input type="number" id="years"> years  <br>
-    <input type="number" id="months"> months
-    <br>
-    <button type="button" onclick="calculate()">Start calculation</button>
-    <h2 id="ToMonths"></h2>
-    <h2 id="ToDays"></h2>
-    <h2 id="ToHours"></h2>
-    <h2 id="ToMinutes"></h2>
-    <h2 id="ToSeconds"></h2>
-    <script src="home.js"></script>  
-    </script>
+<style>
+    #demo{
+        font-size: 20px;
+    }
+
+    table, tr, td {
+        border: 4px solid black;
+        text-align: center;
+        background-color: cyan;
+    }
+    input[type="button"]{
+        width: 100%;
+        background-color: cyan;
+    }
+    input[type='text']{
+        width: 100%;
+        background-color: cyan;
+    }
+</style>
+<body>
+    
+<table style="width: 40%;">
+    <tr>
+        <td colspan="3"><input type="text" width="100%" id="display" disabled></td>
+        <td><button onclick="CLR()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addNum('1')">1</button></td>
+        <td><button onclick="addNum('2')">2</button></td>
+        <td><button onclick="addNum('3')">3</button></td>
+        <td><button onclick="addChar('+')">+</button></td>
+       
+    </tr>
+    <tr>
+        <td><button onclick="addNum('4')">4</button></td>
+        <td><button onclick="addNum('5')">5</button></td>
+        <td><button onclick="addNum('6')">6</button></td>
+        <td><button onclick="addChar('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addNum('7')">7</button></td>
+        <td><button onclick="addNum('8')">8</button></td>
+        <td><button onclick="addNum('9')">9</button></td>
+        <td><button onclick="addChar('*')">×</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addNum('0')">0</button></td>
+        <td><button onclick="calculate()">=</button></td>
+        <td><button onclick="addNum('.')">.</button></td>
+        <td><button onclick="addChar('/')">/</td>
+    </tr>
+</table>
 </body>
+<script src="home.js">
+</script>
 </html>
